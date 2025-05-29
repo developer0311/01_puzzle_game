@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dynamic Image Puzzle Game</title>
+  <link rel="stylesheet" href="public/css/style.css" />
+</head>
+<body>
+  <div class="header">
+    <h1>Image Puzzle Game</h1>
+
+    <!-- Controls: Choose Image and Difficulty in one row (flex centered) -->
+    <div class="controls">
+      <label for="imageInput" id="imageInputLabel">Choose Image</label>
+      <input type="file" id="imageInput" accept="image/*">
+      <select id="difficultySelect">
+        <option value="3">3x3</option>
+        <option value="4">4x4</option>
+        <option value="5">5x5</option>
+        <option value="6">6x6</option>
+        <option value="7">7x7</option>
+        <option value="8">8x8</option>
+        <option value="9">9x9</option>
+        <option value="10">10x10</option>
+      </select>
+    </div>
+
+    <!-- Moves and Time in one row (flex centered) -->
+    <div class="status">
+      <span id="moveCounter">Moves: 0</span>
+      <span id="timer">Time: 0s</span>
+    </div>
+  </div>
+
+  <!-- Puzzle grid -->
+  <div id="puzzleContainer" class="puzzle-grid"></div>
+
+  <!-- Buttons in one row (flex centered) -->
+  <div class="buttons">
+    <button id="startBtn">Start Puzzle</button>
+    <button id="pauseResumeBtn">Pause Timer</button>
+    <button id="solveBtn">Solve Puzzle</button>
+  </div>
+
+  <footer>
+    <p>Designed with ❤️ by <a href="https://github.com/developer0311" target="_blank">Diprati</a></p>
+  </footer>
+
+  <script src="public/js/script.js"></script>
+</body>
+</html>
